@@ -48,14 +48,17 @@ $(document).ready(function () {
 	    var data = $(form).find('.form-base :input');
 	    var dataTelephone = $(form).find('.form-telephone :input');
 
-	    console.log(data.serialize());
+
+	    var dataFinal = data.serialize()+'&'+dataTelephone.serialize();
+
+	    console.log(dataFinal);
 
 	   	var request;
 
 	   	request = $.ajax({
 	   		url: "validate/clientValidate.php",
 	   		type: "POST",
-	   		data: data
+	   		data: dataFinal
 	   	});
 
 	   	request.done(function(response, textStatus, jqXHR){
@@ -66,7 +69,7 @@ $(document).ready(function () {
 	   	});
 
 	   	request.fail(function(errorThrown, textStatus, jqXHR){
-	   		console.log('doesnt work');
+	   		console.log('dosent work');
 	   		console.log(errorThrown);
 	   		console.log(textStatus);
 	   		console.log(jqXHR);
