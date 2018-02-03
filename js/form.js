@@ -49,16 +49,16 @@ $(document).ready(function () {
 	    var dataTelephone = $(form).find('.form-telephone :input');
 
 
-	    var dataFinal = data.serialize()+'&'+dataTelephone.serialize();
+	    //var dataFinal = data.serialize()+'&'+dataTelephone.serialize();
 
-	    console.log(dataFinal);
+	    //console.log(dataFinal);
 
 	   	var request;
 
 	   	request = $.ajax({
 	   		url: "validate/clientValidate.php",
 	   		type: "POST",
-	   		data: dataFinal
+	   		data: data.serialize()
 	   	});
 
 	   	request.done(function(response, textStatus, jqXHR){

@@ -24,7 +24,7 @@
 
 	  <div class="form-group col-md-6 form-base">
 	    <label for="date_birth">Data de Nascimento</label>
-	    <input type="text" class="form-control" id="date_birth" name="date_birth" placeholder="11/11/2011" required>
+	    <input type="date" class="form-control" id="date_birth" name="date_birth" placeholder="11/11/2011" required>
 	  </div>
 
 	  <div class="form-group col-md-6 form-base">

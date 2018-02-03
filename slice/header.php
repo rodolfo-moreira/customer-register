@@ -1,4 +1,8 @@
+<?php
+	require_once("slice/connect.php");
+?>
 <!DOCTYPE html>
+<html>
 <head>
 	<title>Cadastro de Produtos</title>
 
@@ -22,17 +26,17 @@
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <a class="navbar-brand" href="#">Cadastro de Produtos</a>
+	  <a class="navbar-brand" href="index.php">Cadastro de Cliente</a>
 	  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
 	      <li class="nav-item">
-	        <a class="nav-link" href="index.php">Página Inicial</a>
+	        <a class="nav-link" href="index.php">Listagem de Clientes</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="cadastroProduto.php">Cadastro de Produto</a>
+	        <a class="nav-link" href="cadastroCliente.php">Cadastro de Cliente</a>
 	      </li>
 	     
 	    

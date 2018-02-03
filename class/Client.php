@@ -1,4 +1,5 @@
 <?php
+	
 	class Client {
 
 		private $id;
@@ -8,6 +9,15 @@
 		private $active;
 		private $created;
 		private $modified;
+
+		function __construct($nome, $email, $dateBirth, $active, $created, $modified) {
+			$this->nome = $nome;
+			$this->email = $email;
+			$this->dateBirth = $dateBirth;
+			$this->active = $active;
+			$this->created = $created;
+			$this->modified = $modified;
+		}
 
 		public function getId(){
 			return $this->id;
