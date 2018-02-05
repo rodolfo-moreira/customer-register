@@ -6,7 +6,7 @@
 <head>
 	<title>Cadastro de Produtos</title>
 
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="application/json; charset=utf-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,11 +22,12 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 </head>
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <a class="navbar-brand" href="index.php">Cadastro de Cliente</a>
+	  <a class="navbar-brand" href="index.php">Clientes</a>
 	  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -36,7 +37,7 @@
 	        <a class="nav-link" href="index.php">Listagem de Clientes</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="cadastroCliente.php">Cadastro de Cliente</a>
+	        <a class="nav-link" href="customerRegister.php">Cadastro de Cliente</a>
 	      </li>
 	     
 	    

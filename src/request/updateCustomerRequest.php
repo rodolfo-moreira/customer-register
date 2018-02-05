@@ -1,9 +1,14 @@
 <?php
+	use Datetime as DT;
+	use DateTimeZone as DZ;
+	use \Rodolfo\Customers\Entities\Customer;
 	
+	require_once("../Entities/Customer.php"); 
 	require_once("../slice/connect.php");
-	require_once("../class/Client.php"); 
- 	require_once("../dao/ClientDao.php");
+	require_once("../Entities/Customer.php"); 
+ 	require_once("../dao/CustomerDao.php");
 
+ 	$id = $_POST['id'];
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$dateBirth = $_POST['date_birth'];
@@ -31,14 +36,13 @@
 
 	}else{
 
-		$date = new DateTime();
-		$date->setTimezone(new DateTimeZone('America/Sao_Paulo'));
-		$created = $date->format('Y-m-d H:i:s');
+		$date = new DT();
+		$date->setTimezone(new DZ('America/Sao_Paulo'));
 		$modified = $date->format('Y-m-d H:i:s');		
 
-		$client = new Client($name, $email, $dateBirth, $active, $created, $modified);
-		$clientDao = new ClientDao($connect);
+		$customer = new Customer($id, $name, $email, $dateBirth, $active, '', $modified, '');
+		$customerDao = new CustomerDao($connect);
 
-		$clientDao->storeClient($client);
+		$customerDao->updateCustomer($customer);
 
 	}

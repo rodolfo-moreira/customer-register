@@ -1,8 +1,4 @@
-<?php
-	require_once("slice/header.php");
-?>
 
-<form id="registerClient">
   <div class="form-row">
 
   	<div class="form-group col-md-6 form-base">
@@ -49,21 +45,11 @@
 
 	    <div class="form-group col-md-6">
 	      <label for="telephone">Telefone</label>
-	      <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Telefone" required>
+	      <input type="text" class="form-control telefone" id="telephone" name="telephone" placeholder="Telefone" required>
 	    </div>
 	    
 	  </div>
 
   </div>
 
-  <button type="button" class="btn btn-info" id="addTelephone">Adicionar Telefone</button>
-
-  <button type="submit" class="btn btn-success">Cadastrar</button>
-
-</form>
-	
-<script src="js/form.js"></script>
-
-<?php
-	require_once("slice/footer.php");
-?>
+ 

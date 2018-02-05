@@ -1,6 +1,8 @@
 <?php
+
+	namespace Rodolfo\Customers\Entities;
 	
-	class Client {
+	class Customer implements \JsonSerializable{
 
 		private $id;
 		private $nome;
@@ -9,14 +11,17 @@
 		private $active;
 		private $created;
 		private $modified;
+		private $telephones;
 
-		function __construct($nome, $email, $dateBirth, $active, $created, $modified) {
+		function __construct($id, $nome, $email, $dateBirth, $active, $created, $modified, $telephones) {
+			$this->id = $id;
 			$this->nome = $nome;
 			$this->email = $email;
 			$this->dateBirth = $dateBirth;
 			$this->active = $active;
 			$this->created = $created;
 			$this->modified = $modified;
+			$this->telephones = $telephones;
 		}
 
 		public function getId(){
@@ -74,6 +79,15 @@
 		public function setModified($modified){
 			$this->modified = $modified;
 		}
+
+		public function getTelephones(){
+			return $this->telephones;
+		}
+
+		public function jsonSerialize(){
+	        $vars = get_object_vars($this);
+	        return $vars;
+	    }
 
 		
 	}
